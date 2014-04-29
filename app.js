@@ -2,10 +2,11 @@ var express = require('express');
 var http = require('http');
 var app = express();
 
-app.use(express.static(__dirname + "/public"));
+app.set('port', (process.env.PORT || 5000));
+app.use(express.static(__dirname + '/public'));
 
-var server = http.createServer(app).listen(3000, function(){
-  console.log("Guia server listening on port " + 3000);
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
 });
 
 app.get('/menus', function(req, res){
