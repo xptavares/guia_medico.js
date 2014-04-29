@@ -1,10 +1,12 @@
-guia_mnedico.js
-==================
-
+## guia_mnedico.js
+```
 Guia Medico
+```
 
+## Deploying to Heroku
 
-How To Use It ?
-===============
-
-I dont know.
+```
+heroku create
+git push heroku master
+heroku open
+```
